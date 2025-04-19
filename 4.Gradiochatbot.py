@@ -1,4 +1,15 @@
+"""
+1. Meta is the company behind Facebook and Instagram. They created the LLaMA models, which are open-source AI models that can generate text and be customized or fine-tuned. 
 
+2. OpenAI is the company that built ChatGPT, GPT-3, and GPT-4. Their models are not open-source, but they are very powerful and easy to use through cloud-based APIs. 
+
+3. Ollama is a newer company that builds a tool for running large language models like LLaMA,gemma, Phi, Mistral, and others locally on your computer. 
+
+4. Phi is LLM model used to generate a text developed by Microsoft it is also opensource like llama can be runned locally like llama via ollama and can be finetunned 
+
+5. GPT: Hosted on OpenAI’s servers, requires an API key and API requests.
+
+"""
 #Build my own chatbot that interacts with phi model to get answers for my questions using gardio framework
 import gradio as gr
 import openai

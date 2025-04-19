@@ -3,3 +3,13 @@
 /phi.ipynb
 /summary.ipynb
 /Typesmodels.ipynb
+# Ignore virtual environment
+venv/
+__pycache__/
+
+# Ignore compiled files
+*.pyc
+*.pyd
+*.dll
+*.lib
+

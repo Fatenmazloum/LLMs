@@ -1,11 +1,11 @@
-import os#for pdfs..
+import os#operating system
 import numpy as np#for embeddings
 from langchain_community.llms import HuggingFaceHub #to answer like human
 from langchain_community.embeddings import HuggingFaceEmbeddings#embedd files to be saved in vector database
 from langchain.text_splitter import RecursiveCharacterTextSplitter#chunking texts inside documents into smaller parts
 from langchain_community.vectorstores import FAISS #vector database 
 from langchain_core.prompts import PromptTemplate #tells llms how to answer
-from langchain_community.document_loaders import PyPDFDirectoryLoader#to load pdfs into documents
+from langchain_community.document_loaders import PyPDFDirectoryLoader#convert pdfs into langchain document objects
 from langchain.chains import RetrievalQA#build chains to answer(generate answer)
 
 #load pdfs from url (internet source or website)
@@ -48,7 +48,7 @@ embed=HuggingFaceEmbeddings(
 #now create vectordatabase to store embeddings inside
 vectorstore=FAISS.from_documents(aftersplit,embedding=embed)
 #now the user will ask  question and the question will be embedded
-#the vector database will serach for documnets similar to question and retrieve them
+#the vector database will search for documnets similar to question and retrieve them
 #now the retrieved document will be entered to LM with the question to generate answer like human
 
 #so retrievalqa.chain is to create chain (steps) to generate tha answer(which model you want to use,prompt,retreiver(how the documnets will be retrieved)..)
