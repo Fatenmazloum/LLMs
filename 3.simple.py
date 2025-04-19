@@ -1,6 +1,6 @@
 #run phi model in python code using openai library
 import openai
-client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="nokeyneeded")#hosted like chatgpt api key needed where as locally like phi and llama no api needed
+client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="nokeyneeded")#hosted like chatgpt api key needed where phi and llama no api needed
 #setting up a connection to an AI model (phi) using the OpenAI library and specifying the base URL and API key. 
 #url webaddress to find resources online,localhost means locally 
 #tell your Python code where Phi is running

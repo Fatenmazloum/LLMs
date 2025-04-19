@@ -1,7 +1,7 @@
 import os#for pdfs..
 import numpy as np#for embeddings
 from langchain_community.llms import HuggingFaceHub #to answer like human
-from langchain_community.embeddings import HuggingFaceEmbeddings#embedd files to bde saved in vector database
+from langchain_community.embeddings import HuggingFaceEmbeddings#embedd files to be saved in vector database
 from langchain.text_splitter import RecursiveCharacterTextSplitter#chunking texts inside documents into smaller parts
 from langchain_community.vectorstores import FAISS #vector database 
 from langchain_core.prompts import PromptTemplate #tells llms how to answer
@@ -27,9 +27,9 @@ for file in files:
 #convert pdfs into langchain document objects
 loader=PyPDFDirectoryLoader("faten")#takes folder name 
 beforesplit=loader.load()
-#now each page in pdf is converted to langchain document objec so before split is 63 documents
+#now each page in pdf is converted to langchain document object so before split length is 63 
 #each document object contains dictionary of metdata(author,pagenumber,title,source..) and page content(text inside the page)
-#now each pagecontent contains 5000 words we cannot embedd them
+#now each pagecontent contains 5000 words we cannot embed them
 #chunk the text in the document into smaller parts in this case number of documents will increase and in each document we can indicate how many caharcter we wants
 #chunking using text splitter
 splitter=RecursiveCharacterTextSplitter(

@@ -1,5 +1,5 @@
-#Gradio is python library that helps you create user interface that lets users input questions (like asking your chatbot) and receive responses. It essentially connects the input (question) and output (response) from your chatbot model in a simple and user-friendly way.
-#Build my own chatbot that interacts with phi model to get answers for my questions
+
+#Build my own chatbot that interacts with phi model to get answers for my questions using gardio framework
 import gradio as gr
 import openai
 
